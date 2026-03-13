@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { sora } from "@/lib/fonts";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const navigation = [
@@ -21,7 +24,14 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="fixed z-50 top-0 right-0 left-0 backdrop-blur-xl">
+    <motion.nav
+      style={{ transformOrigin: "top left" }}
+      initial={{ opacity: 0, scaleX: 0 }}
+      whileInView={{ opacity: 1, scaleX: 1 }}
+      transition={{ duration: 1, delay: 0.1 }}
+      viewport={{ once: true }}
+      className="fixed z-50 top-0 right-0 left-0 backdrop-blur-xl"
+    >
       <div
         className={`w-full ${sora.className} h-auto px-16 py-4 border-b-2 border-gray-900 flex justify-between items-center`}
       >
@@ -44,7 +54,7 @@ const Navbar = () => {
           <span className="relative z-10">Download CV</span>
         </button>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
