@@ -1,12 +1,13 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import React from "react";
+import About from "@/components/About";
 
 const page = () => {
   return (
     <div className="pt-20">
       <Navbar />
       <Hero />
+      <About />
     </div>
   );
 };

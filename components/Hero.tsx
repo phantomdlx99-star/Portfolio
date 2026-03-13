@@ -1,9 +1,10 @@
 import { sora } from "@/lib/fonts";
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <div
-      className={`w-full px-10 gap-4 min-h-[90dvh] bg-linear-to-br from-blue-950 to-secondary flex flex-col items-start justify-between ${sora.className} md:flex-row p-10`}
+      className={`w-full gap-4 min-h-[90dvh] max-h-dvh bg-linear-to-br from-blue-950 to-secondary flex flex-col items-start justify-between ${sora.className} md:flex-row md:items-center md:justify-between p-10`}
     >
       <div className="flex-1">
         <h1 className="text-[#6b6a96] text-4xl font-bold">Hi, I'm Alex.</h1>
@@ -22,7 +23,15 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="flex-1"></div>
+      <div className="flex-1 flex justify-end pr-10">
+        <Image
+          src={"/portfolio-image.jpeg"}
+          width={350}
+          height={350}
+          alt="Portfolio_Image"
+          className="rounded-2xl"
+        />
+      </div>
     </div>
   );
 };
