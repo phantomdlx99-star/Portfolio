@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Project from "@/components/Project";
+import Skills from "@/components/Skills";
 
 const page = () => {
   return (
@@ -10,6 +11,7 @@ const page = () => {
       <Hero />
       <About />
       <Project />
+      <Skills />
     </div>
   );
 };

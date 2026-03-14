@@ -24,12 +24,8 @@ const Navbar = () => {
     },
   ];
   return (
-    <motion.nav
+    <nav
       style={{ transformOrigin: "top left" }}
-      initial={{ opacity: 0, scaleX: 0 }}
-      whileInView={{ opacity: 1, scaleX: 1 }}
-      transition={{ duration: 1, delay: 0.1 }}
-      viewport={{ once: true }}
       className="fixed z-50 top-0 right-0 left-0 backdrop-blur-xl"
     >
       <div
@@ -54,7 +50,7 @@ const Navbar = () => {
           <span className="relative z-10">Download CV</span>
         </button>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 
